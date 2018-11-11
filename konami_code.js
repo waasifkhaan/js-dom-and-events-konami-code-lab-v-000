@@ -5,26 +5,21 @@ function init() {
   let index = 0;
 
   const main = document.querySelector('body');
- 
-main.addEventListener('keydown', function(event) {
-  
-});
- 
 // This is the function that would be invoked by the event listener.
 function onKeyDownHandler(e) {
   const key = parseInt(e.detail || e.which);
- 
+
   if (key === code[index]) {
     index++;
- 
+
     if (index === code.length) {
       alert("Hurray!");
- 
+
       index = 0;
     }
   } else {
     index = 0;
   }
 }
-
-}
+return main.addEventListener('keydown',onKeyDownHandler);
+};
